@@ -1,1 +1,1 @@
-A readme file containing code for python intro
+A repository containing code for all python projects.
