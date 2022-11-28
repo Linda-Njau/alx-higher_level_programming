@@ -1,1 +1,1 @@
-A repository containing code for intro to python
+A repository containing code for intro to python.
