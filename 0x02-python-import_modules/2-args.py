@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/pytho
 if __name__ == "__main__":
     from sys import argv
     arg = len(argv)
