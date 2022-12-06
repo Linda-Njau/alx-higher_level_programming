@@ -12,5 +12,5 @@ def add_tuple(tuple_a=(), tuple_b=()):
         else:
             tuple_b = tuple_b[0], 0
 
-    tuple_add = tuple(map(lambda i, j: i + j, tuple_a, tuple_b))
+    tuple_add = (tuple_b[0] + tuple_a[0], tuple_b[1] + tuple_a[1])
     return tuple_add
