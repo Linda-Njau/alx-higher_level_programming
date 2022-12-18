@@ -18,9 +18,10 @@ int is_palindrome(listint_t **head)
 		count++;
 		ptr = ptr->next;
 	}
-	front = *head;
-	back = *head;
-
+	while (i != count/2)
+	{
+		front = *head;
+		back = *head;
 		for (j = 0; j < i; j++)
 		{		
 			front = front->next;
@@ -31,12 +32,12 @@ int is_palindrome(listint_t **head)
 		}	
 		if (front->n != back->n)
 		{
-			return 0;
+			return (0);
 		}
 		else
 		{
 			i++;
 		}		
 	}	
-	return 1;
+	return (1);
 }
