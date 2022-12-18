@@ -18,8 +18,8 @@ int is_palindrome(listint_t **head)
 		count++;
 		ptr = ptr->next;
 	}
-	front = head;
-	back = head;
+	front = *head;
+	back = *head;
 
 		for (j = 0; j < i; j++)
 		{		
