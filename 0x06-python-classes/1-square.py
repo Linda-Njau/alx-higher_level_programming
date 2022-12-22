@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""creating square"""
+"""creating square with size attribute"""
 
 
 class Square():
