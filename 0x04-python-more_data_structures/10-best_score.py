@@ -5,4 +5,3 @@ def best_score(a_dictionary):
     else:
         max_key = max(a_dictionary, key=a_dictionary.get)
         return max_key
-
