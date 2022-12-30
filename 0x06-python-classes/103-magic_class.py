@@ -23,6 +23,6 @@ class MagicClass:
         """return area"""
         return (self.__radius ** 2 * math.pi)
 
-    def circumfrence(self):
+    def circumference(self):
         """return circumfrence"""
         return (2 * math.pi * self.__radius)
