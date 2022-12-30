@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""magic class"""
+"""define magicclass matching bytecode"""
+
 
 import math
-"""math module"""
 
 
 class MagicClass:
