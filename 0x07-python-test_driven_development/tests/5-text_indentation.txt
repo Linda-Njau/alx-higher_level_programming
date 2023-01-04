@@ -1,0 +1,53 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("""Living life""")
+Living life
+>>> text_indentation("Living life.")
+Living life.
+<BLANKLINE>
+>>> text_indentation("Living life:")
+Living life:
+<BLANKLINE>
+>>> text_indentation("Living life?")
+Living life?
+<BLANKLINE>
+>>> text_indentation("	Living: life")
+Living:
+<BLANKLINE>
+life
+>>> text_indentation(123)
+Traceback (most recent call last):
+   ...
+TypeError: text must be a string
+>>> text_indentation("Living. Life? Now:")
+Living.
+<BLANKLINE>
+Life?
+<BLANKLINE>
+Now:
+<BLANKLINE>
+>>> text_indentation("?")
+?
+<BLANKLINE>
+>>> text_indentation("?.:")
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+>>> text_indentation("Living:	")
+Living:
+<BLANKLINE>
+>>> text_indentation("Living:	life?")
+Living:
+<BLANKLINE>
+life?
+<BLANKLINE>
+>>> text_indentation("Living\n")
+Living
+>>> text_indentation("Living:!\n ?")
+Living:
+<BLANKLINE>
+!
+?
+<BLANKLINE>
