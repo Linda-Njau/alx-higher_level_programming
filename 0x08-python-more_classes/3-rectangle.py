@@ -23,6 +23,10 @@ class Rectangle:
 
     @property
     def height(self):
+        return(self.__height)
+
+    @height.setter
+    def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -39,13 +43,13 @@ class Rectangle:
             return(2 *(self.__width + self.__height)
 
     def __str__(self):
+        """returns representable version of rectangle"""
         if(self.__width == 0 or self.__height == 0):
             return("")
 
         rectangle = []
         for h in range(self.__height):
-            for w in range(self.__width):
-               rectangle.append("#")
+            [rectangle.append("#") for w in range(self.__width)]
             if h != self.__height - 1:
                 rectangle.append("\n")
         return("".join(rectangle))
