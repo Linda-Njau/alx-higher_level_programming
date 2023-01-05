@@ -1,18 +1,21 @@
 #!/usr/bin/python3
-"""class rectangle"""
+"""class of rectangles"""
 
 
 class Rectangle:
     """defines rectangle"""
+    number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """instantiates width and height"""
+        """instatiates width and height"""
         self.width = width
         self.height = height
-
+        Rectangle.number_of_instances += 1
+ 
     @property
     def width(self):
-        return(self.__width)
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -24,7 +27,7 @@ class Rectangle:
 
     @property
     def height(self):
-        return(self.__height)
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -35,7 +38,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return(self.__width * self.__height)
+        return(self.__width * self__height)
 
     def perimeter(self):
         if(self.__width == 0 or self.__height == 0):
@@ -49,12 +52,15 @@ class Rectangle:
         rectangle = []
         for h in range(self.__height):
             for w in range(self.__width):
-                rectangle.append("#")
+                rectangle.append(str(self.print_symbol))
             if h != self.__height - 1:
                 rectangle.append("\n")
         return("".join(rectangle))
 
     def __repr__(self):
-        rep = "{}({},{})".format(self.__class__.__name__,
-                                 self.width, self.height)
-        return rep
+        return "{}({},{}".format(__class__.__name__,
+                                 self.width, self.height) 
+
+    def __del__(self):
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
