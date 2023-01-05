@@ -43,7 +43,7 @@ class Rectangle:
         else:
             return(2 * (self.__width + self.__height))
 
-    def __repr__(self):
+    def __str__(self):
         if(self.__width == 0 or self.__height == 0):
             return ""
         rectangle = []
@@ -54,13 +54,7 @@ class Rectangle:
                 rectangle.append("\n")
         return("".join(rectangle))
 
-
-
-
-
-
-
-
-
-
-
+    def __repr__(self):
+        rep = "{}({},{})".format(self.__class__.__name__,
+                            self.width, self.height)
+        return rep
