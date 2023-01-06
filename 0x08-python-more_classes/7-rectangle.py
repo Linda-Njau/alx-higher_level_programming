@@ -12,7 +12,7 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
- 
+
     @property
     def width(self):
         return self.__width
@@ -58,8 +58,7 @@ class Rectangle:
         return("".join(rectangle))
 
     def __repr__(self):
-        return "{}({},{}".format(__class__.__name__,
-                                 self.width, self.height) 
+        return "{}({},{}".format(__class__.__name__,self.width, self.height) 
 
     def __del__(self):
         print("Bye rectangle...")
