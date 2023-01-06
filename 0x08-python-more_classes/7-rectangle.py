@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""class of rectangles"""
+"""class of Rectangles"""
 
 
 class Rectangle:
@@ -58,7 +58,8 @@ class Rectangle:
         return("".join(rectangle))
 
     def __repr__(self):
-        return "{}({},{}".format(__class__.__name__,self.width, self.height)
+        return "{}({},{}".format(__class__.__name__,
+                                 self.width, self.height)
 
     def __del__(self):
         print("Bye rectangle...")
