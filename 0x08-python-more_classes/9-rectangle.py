@@ -21,7 +21,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
-            raise TypeError("width must be and integer")
+            raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
@@ -52,9 +52,9 @@ class Rectangle:
         rectangle = []
         for h in range(self.__height):
             for w in range(self.__width):
-                 rectangle.append(self.print_symbol)
+                rectangle.append(self.print_symbol)
             if h != self.__height - 1:
-                 rectangle.append("\n")
+                rectangle.append("\n")
         return("".join(rectangle))
 
     def __repr__(self):
