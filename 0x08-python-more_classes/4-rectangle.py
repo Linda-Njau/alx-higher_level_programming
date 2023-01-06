@@ -55,6 +55,6 @@ class Rectangle:
         return("".join(rectangle))
 
     def __repr__(self):
-        rep = "{}({}, {})".format(self.__class__.__name__, self.width, self.height)
-
+        rep = "{}({}, {})".format(self.__class__.__name__,
+                                  self.width, self.height)
         return rep
