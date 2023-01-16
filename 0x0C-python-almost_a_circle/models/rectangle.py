@@ -63,19 +63,19 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        return(self.__width * self.__height)
+        return(self.width * self.height)
 
     def display(self):
-        print(self.__y * "\n", end="")
-        for h in range(self.__height):
-            print("{}".format(self.__x * " "), end="")
-            for w in range(self.__width):
+        print(self.y * "\n", end="")
+        for h in range(self.height):
+            print("{}".format(self.x * " "), end="")
+            for w in range(self.width):
                 print("#", end="")
             print("")
 
     def __str__(self):
         return("[{}] ({}) {}/{} - {}/{}".format(__class__.__name__, self.id,
-                                               self.__x, self.__y, self.__width, self.__height))
+                                               self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
         if len(args) == 0:
@@ -83,10 +83,10 @@ class Rectangle(Base):
                 self.__setattr__(key, val)
         try:
             self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
         except IndexError:
             pass
 
@@ -96,14 +96,3 @@ class Rectangle(Base):
                 'id': getattr(self, "id"),
                 'height': getattr(self, "height"),
                 'width': getattr(self, "width")}
-
-
-
-
-
-
-
-
-
-
-
