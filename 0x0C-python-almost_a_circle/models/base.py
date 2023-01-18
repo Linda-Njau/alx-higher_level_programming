@@ -18,7 +18,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         if list_dictionaries is None:
-            return []
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -52,30 +52,7 @@ class Base:
         filename = str(cls.__name__) + ".json"
         try:
             with open(filename, mode='r') as jsonfile:
-               dict_list = Base.from_json_string(jsonfile.read())
-               return [cls.create(**d) for d in dict_list]
+                dict_list = Base.from_json_string(jsonfile.read())
+                return [cls.create(**d) for d in dict_list]
         except IOError:
             return []
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
