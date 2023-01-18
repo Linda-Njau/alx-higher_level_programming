@@ -63,9 +63,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """returns width * height"""
         return(self.width * self.height)
 
     def display(self):
+        """returns printed rectangle"""
         print(self.y * "\n", end="")
         for h in range(self.height):
             print("{}".format(self.x * " "), end="")
@@ -74,10 +76,12 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """prints class representation of a rectangle"""
         return("[{}] ({}) {}/{} - {}/{}".format(__class__.__name__, self.id,
                                                self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
+        """updates with a new class instance"""
         if len(args) == 0:
             for key, val in kwargs.items():
                 self.__setattr__(key, val)
@@ -91,6 +95,7 @@ class Rectangle(Base):
             pass
 
     def to_dictionary(self):
+        """returns dictionary representation of class"""
         return {'x': getattr(self, "x"),
                 'y': getattr(self, "y"),
                 'id': getattr(self, "id"),
