@@ -21,6 +21,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """update the class with a new instance"""
         if len(args) == 0:
             for key, value in kwargs.items():
                 self.__setattr__(key, value)
@@ -33,33 +34,13 @@ class Square(Rectangle):
             pass
 
     def __str__(self):
+        """prints square class representation"""
         return ("[{}] ({}) {}/{} - {}".format(__class__.__name__,
                                               self.id, self.x, self.y, self.width))
 
     def to_dictionary(self):
+        """returns dictionary representation of the class attributes"""
         return {'id': getattr(self, "id"),
                 'x': getattr(self, "x"),
                 'size': getattr(self, "size"),
                 'y': getattr(self, "y")}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
