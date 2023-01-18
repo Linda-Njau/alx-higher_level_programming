@@ -23,7 +23,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        file_name = str(cls.__name__) + ".json"
+        file_name = cls.__name__ + ".json"
         with open(file_name, mode='w') as jsonfile:
             if list_objs is None:
                 jsonfile.write("[]")
@@ -31,6 +31,7 @@ class Base:
                 for obj in list_objs:
                     obj_dict = obj.to_dictionary()
                     jsonfile.write(Base.to_json_string(obj_dict))
+                return
 
     @staticmethod
     def from_json_string(json_string):
