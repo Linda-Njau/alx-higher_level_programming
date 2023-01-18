@@ -25,6 +25,7 @@ class Square(Rectangle):
         if len(args) == 0:
             for key, value in kwargs.items():
                 self.__setattr__(key, value)
+            return
         try:
             self.id = args[0]
             self.size = args[1]
