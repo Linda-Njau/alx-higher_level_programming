@@ -43,7 +43,7 @@ class Base:
             obj = cls(4, 5)
         elif cls.__name__ == "Square":
             obj = cls(5)
-        r2.update(**dictionary)
+        obj.update(**dictionary)
         return obj
 
     @classmethod
