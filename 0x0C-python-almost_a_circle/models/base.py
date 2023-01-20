@@ -33,7 +33,7 @@ class Base:
                 
     @staticmethod
     def from_json_string(json_string):
-        if len(json_string) == 0:
+        if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
 
