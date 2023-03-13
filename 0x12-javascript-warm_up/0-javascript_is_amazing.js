@@ -1,4 +1,4 @@
 #!/usr/bin/node
-'use strict';
+'user strict';
 const myVar = 'JavaScript is amazing';
 console.log(myVar);
