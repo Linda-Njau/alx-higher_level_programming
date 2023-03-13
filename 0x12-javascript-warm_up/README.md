@@ -1,0 +1,1 @@
+This reposiotry contains an exploration and introduction to javascript
