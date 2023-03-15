@@ -1,9 +1,11 @@
 #!/usr/bin/node
-'use strict';
-let secondBiggest = 0;
-let args = process.argv.slice(2);
-if (args.length > 1) {
-  args.sort();
-  secondBiggest = args[args.length - 2];
+const args = process.argv.slice(2).map(Number);
+
+if (args.length === 0) {
+  console.log(0);
+} else if (args.length === 1) {
+  console.log(0);
+} else {
+  const sortedArgs = args.sort((a, b) => b - a);
+  console.log(sortedArgs[1]);
 }
-console.log(secondBiggest);
