@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""
-has the class City
-"""
+"""defines class City"""
 
+from model_state import Base, State
 import sqlalchemy
 from sqlalchemy import Column, Integer, String, ForeignKey
-from relationship_state import Base, State
 
 
 class City(Base):
-    """Represents a city"""
+    """Defines class City"""
     __tablename__ = "cities"
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
