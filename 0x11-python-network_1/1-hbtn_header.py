@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" sends a request to the url and displays 
+""" sends a request to the url and displays
 the value of the x-Request-ID
 """
 if __name__ == "__main__":
