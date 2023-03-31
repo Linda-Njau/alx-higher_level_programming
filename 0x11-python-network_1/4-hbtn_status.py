@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-fetch status of the url
+fetches https://intranet.hbtn.io/status
 """
-if __name__ == "__main__":
+if __name__ == '__main__':
     import requests
-    response = requests.get('https://intranet.hbtn.io/status')
-    text = response.text
+    r = requests.get('https://intranet.hbtn.io/status')
+    text = r.text
     print("Body response:")
     print("\t- type: {}".format(type(text)))
     print("\t- content: {}".format(text))
